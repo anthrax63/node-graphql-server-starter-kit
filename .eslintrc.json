@@ -1,0 +1,60 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "mocha"
+  ],
+  "settings": {
+  },
+  "globals": {
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "MemberExpression": 1,
+        "SwitchCase": 1
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 160
+      }
+    ],
+    "semi": 2,
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "require-jsdoc": [
+      "off"
+    ],
+    "valid-jsdoc": [
+      "error"
+    ],
+    "no-console": [
+      "off"
+    ],
+    "no-invalid-this": [
+      "off"
+    ],
+    "space-before-function-paren": [
+      "off"
+    ],
+    "mocha/no-exclusive-tests": "error"
+  }
+}
