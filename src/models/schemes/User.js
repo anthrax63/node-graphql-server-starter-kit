@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const {ObjectId} = mongoose.Schema.Types;
 const createModelWithPlugins = require('../helpers/createModelWithPlugins');
-const randomatic = require('randomatic');
-
 
 const Schema = new mongoose.Schema({
   firstName: {type: String, trim: true},
