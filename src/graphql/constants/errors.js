@@ -116,6 +116,17 @@ class AccessViolationError extends QueryError {
   }
 }
 
+class CodeExpiredError extends QueryError {
+  constructor(data) {
+    super('VL_CODE_EXPIRED', messages.codeExpiredError, data);
+  }
+}
+
+class InvalidCodeError extends QueryError {
+  constructor(data) {
+    super('VL_INVALID_CODE', messages.invalidCodeError, data);
+  }
+}
 
 module.exports = {
   InternalServerError,
@@ -124,5 +135,7 @@ module.exports = {
   NotFoundError,
   AuthorizationError,
   InvalidLoginOrPasswordError,
-  AccessViolationError
+  AccessViolationError,
+  CodeExpiredError,
+  InvalidCodeError
 };
