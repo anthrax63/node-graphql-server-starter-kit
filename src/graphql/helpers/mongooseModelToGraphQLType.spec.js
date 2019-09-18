@@ -25,8 +25,8 @@ const TestSchema = new mongoose.Schema({
   bool: {type: Boolean, default: false, required: true, index: true},
   nested: {type: PlatformCouponSchema, required: true},
   nestedArray: {type: [PlatformCouponSchema], required: true},
-  foreignSingle: {type: mongoose.Schema.ObjectId, ref: 'File'},
-  foreignArray: {type: [mongoose.Schema.ObjectId], ref: 'File'}
+  foreignSingle: {type: mongoose.Schema.ObjectId, ref: 'User'},
+  foreignArray: {type: [mongoose.Schema.ObjectId], ref: 'User'}
 });
 
 const LineSchema = new mongoose.Schema({});
