@@ -215,6 +215,8 @@ function mongooseSchemaToGraphQLType(name, service, schema, options = {}, level 
 
     if (options.readOnly) {
       fields[f].setOn = [];
+    } else if (options.createOnly) {
+      fields[f].setOn = ['create'];
     }
     // fields[f].filter = options.filter;
   });
