@@ -23,7 +23,7 @@ describe('UserService', function () {
     });
   });
 
-  describe('#signInWithFacebook', () => {
+  describe.skip('#signInWithFacebook', () => {
     it('should sign in with facebook', async () => {
       const testToken = 'EAAFzJtB0620BAJJKZCoi39l9sXeYgoZAxeKx9VeRFHNlZB8As8ALg32BZAE2GnUBtssb73qmQZC3SgBVV0A0YxZATvznPTS4Qwl68XhAyjCOPR1q3D5HHhDJOhGr26YWOR5y8Q66EcSHYK9igek6W0WUQwWdsnRIBw2Q2VOUviBAZDZD';
       const userService = new UserService();
@@ -40,7 +40,7 @@ describe('UserService', function () {
   });
 
 
-  describe('#signInWithTwitter', () => {
+  describe.skip('#signInWithTwitter', () => {
     it('should sign in with twitter', async () => {
       const testToken = '527773409-8GRiFkLfaSMlgZIDkgvNOearBILp061eKjoQBeVs';
       const testSecret = 'dhyY5MyttmVJw9WucsIC7OOktRmmYh7Wp3NA6UumR2Jno';

@@ -7,7 +7,7 @@
     "graphql-server-starter-kit": "bin/server.js"
   },
   "scripts": {
-    "test": "mocha \"./src/**/*.spec.js\"",
+    "test": "mocha --exit \"./src/**/*.spec.js\"",
     "lint": "eslint ./src --fix",
     "createMigration": "tools/createMigration.js",
     "makeMigrations": "migrate-mongo up",
@@ -38,6 +38,7 @@
     "handlebars": "^4.1.2",
     "localtunnel": "^1.9.2",
     "migrate-mongo": "^6.0.1",
+    "mime": "^2.4.4",
     "moment": "^2.24.0",
     "mongoose": "^5.6.11",
     "mongoose-auto-increment": "^5.0.1",
@@ -59,7 +60,8 @@
     "eslint-config-google": "^0.13.0",
     "eslint-plugin-mocha": "^6.1.0",
     "mocha": "^6.2.0",
-    "npm-watch": "^0.6.0"
+    "npm-watch": "^0.6.0",
+    "sinon": "^7.4.2"
   },
   "watch": {
     "server": "{bin,src}/**/*.js"

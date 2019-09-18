@@ -51,7 +51,7 @@ describe('mongooseModelToGraphQLType', () => {
       objectId: 'TestViewObjectId!',
       anotherObjectId: 'TestViewAnotherObjectId!',
       number: 'Float!',
-      stringEnum: 'String',
+      stringEnum: 'TestViewStringEnumEnum',
       string: 'String!',
       stringArray: '[String]!',
       numberArray: '[Float]!',

@@ -12,7 +12,7 @@ const testCredentials = {
 
 const testFile = path.join(__dirname, './testdata/test.txt');
 
-describe('GoogleCloudStorage', function () {
+describe.skip('GoogleCloudStorage', function () {
   this.timeout(60000);
   describe('#uploadFileFromStream', () => {
     it('should upload file', async () => {

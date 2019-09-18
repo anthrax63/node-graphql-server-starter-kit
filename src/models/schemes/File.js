@@ -14,7 +14,8 @@ const Schema = new mongoose.Schema({
     type: String,
     graphQLOptions: {hidden: true, description: 'Used for system files'},
     index: true,
-    unique: true
+    unique: true,
+    sparse: true
   }
 });
 

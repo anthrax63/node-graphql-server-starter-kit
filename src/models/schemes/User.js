@@ -13,7 +13,8 @@ const Schema = new mongoose.Schema({
   facebookId: {type: String},
   twitterId: {type: String},
   signInCode: {type: String, graphQLOptions: {hidden: true}},
-  signInCodeExpiration: {type: Date, graphQLOptions: {hidden: true}}
+  signInCodeExpiration: {type: Date, graphQLOptions: {hidden: true}},
+  refCode: {type: Number, default: () => Math.round(Math.random() * 1000000)}
 });
 
 
