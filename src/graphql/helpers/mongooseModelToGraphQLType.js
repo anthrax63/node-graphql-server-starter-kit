@@ -118,8 +118,9 @@ function mongooseFieldToGraphQLField(name, inputField, level = 0, isInput = fals
     textSearch: fieldSchema.options.graphQLOptions && fieldSchema.options.graphQLOptions.textSearch
   };
 
-  if (fieldSchema.options.ref && !isInput) {
-    const Service = getServiceForModel(fieldSchema.options.ref);
+  const ref = fieldSchema.caster && fieldSchema.caster.options && fieldSchema.caster.options.ref ? fieldSchema.caster.options.ref : fieldSchema.options.ref;
+  if (ref && !isInput) {
+    const Service = getServiceForModel(ref);
 
     fld.foreign = true;
     fld.resolve = async (parent) => {
@@ -175,7 +176,6 @@ function mongooseSchemaToGraphQLInputType(name, schema) {
   });
 }
 
-
 /**
  * Creates GraphQL type fields using mongoose model
  * @param {string} name
@@ -215,8 +215,6 @@ function mongooseSchemaToGraphQLType(name, service, schema, options = {}, level 
 
     if (options.readOnly) {
       fields[f].setOn = [];
-    } else if (options.createOnly) {
-      fields[f].setOn = ['create'];
     }
     // fields[f].filter = options.filter;
   });
