@@ -40,7 +40,7 @@
     "migrate-mongo": "^6.0.1",
     "mime": "^2.4.4",
     "moment": "^2.24.0",
-    "mongoose": "^5.6.11",
+    "mongoose": "^5.7.5",
     "mongoose-auto-increment": "^5.0.1",
     "nodemailer": "^6.3.0",
     "nodemailer-smtp-transport": "^2.7.4",
