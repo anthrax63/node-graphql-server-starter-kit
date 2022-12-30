@@ -59,7 +59,7 @@
     "eslint": "^6.2.2",
     "eslint-config-google": "^0.13.0",
     "eslint-plugin-mocha": "^6.1.0",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "npm-watch": "^0.6.0",
     "sinon": "^7.4.2"
   },
